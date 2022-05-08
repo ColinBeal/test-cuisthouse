@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'stylings/colors.scss';
+@import 'stylings/fonts.scss';
+
+body {
+  margin: 0; // get rid of user agent stylesheet
+}
