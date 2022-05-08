@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
+import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
     MainComponent,
     NavBarComponent,
     CardComponent

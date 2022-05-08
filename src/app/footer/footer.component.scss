@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+.footer {
+  padding: 2em 10em 2em 10em;
+  color: $accent-color;
+  background: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/footer-bg.png') top right no-repeat;
+  font: $xs-text;
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5em;
+    .logo-container {
+      margin: 1em 5em 0em 5em;
+    }
+    ul {
+      list-style-type: none;
+      li.active {
+        font-weight: 600;
+      }
+    }
+  }
+}

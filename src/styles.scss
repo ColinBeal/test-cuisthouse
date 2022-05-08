@@ -15,4 +15,6 @@
 // shared styles for the whole app
 body {
   margin: 0; // get rid of user agent stylesheet
+  font-family: 'DM Sans', sans-serif;
+  color: $body-color;
 }
