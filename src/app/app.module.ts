@@ -7,14 +7,16 @@ import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CardComponent,
     FooterComponent,
     MainComponent,
     NavBarComponent,
-    CardComponent
+    RecipesComponent
   ],
   imports: [
     BrowserModule,

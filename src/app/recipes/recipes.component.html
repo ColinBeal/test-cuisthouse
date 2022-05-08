@@ -1,0 +1,27 @@
+<div class="image-cover">
+  <div class="cta-content">
+    <h1 class="primary">
+      <div class="header-content">
+        les recettes
+      </div>
+    </h1>
+    <p>
+      Vous aimez cuisiner des recettes simples et rapides, ou au contraire raffinées, dignes des grands chefs ?
+      <br />
+      Légères… ou gourmandes ?
+      <br />
+      Classiques ou originales ?
+      <br />
+      Quelque soit votre idée, vous trouverez forcément parmi nos meilleures recettes de quoi réaliser le menu idéal pour régaler vos proches.
+      <br />
+      Bon appétit !
+    </p>
+  </div>
+  <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/scroll-icon.png" alt="scroll down" class="scroll">
+</div>
+
+<div class="cards-list-container">
+  <div class="cards-list">
+    <app-card *ngFor="let card of cards" [card]="card"></app-card>
+  </div>
+</div>

@@ -25,11 +25,21 @@
          margin-top: -2em;
          height: 24px;
        }
+       img:not(:last-child){
+         margin-right: 0.2em;
+       }
      }
    }
    .label {
      font: $m-text;
      color: $accent-color;
+   }
+   .actions {
+    display: flex;
+    flex-direction: row;
+    .button {
+      margin-left: 1em;
+    }
    }
    .hidden {
      display: none;
@@ -67,6 +77,10 @@
       width: 30%;
     }
   }
+}
+
+.cards-list-container.no-bg{
+  background: none;
 }
 
 // animation

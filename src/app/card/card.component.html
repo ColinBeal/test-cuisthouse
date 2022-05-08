@@ -11,8 +11,16 @@
     <div class="label">
       {{card.label}}
     </div>
-    <div class="x-centered small button hidden">
-      <a>Voir la recette</a>
+    <div class="x-centered actions">
+      <div class="small button hidden">
+        <a>Voir la recette</a>
+      </div>
+      <div *ngIf="currentPath === '/recipes'" class="small blue button hidden">
+        <a>Ajouter aux favoris</a>
+      </div>
+      <div *ngIf="currentPath === '/favorites'" class="small red button hidden">
+        <a>Retirer des favoris</a>
+      </div>
     </div>
   </div>
 </div>

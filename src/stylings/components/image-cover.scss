@@ -8,6 +8,7 @@
   margin-top: -5em;
   .cta-content {
     @include center-y;
+    max-width: 600px;
   }
   .scroll {
     width: 37px;

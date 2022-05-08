@@ -14,10 +14,18 @@
 
 .small.button {
   font: $xxs-text;
-  padding: 0.2em 0.5em 0.2em 0.5em;
+  padding: 0.2em 1em 0.2em 1em;
 }
 
 .accent.button {
   background-color: $accent-color;
   color: $main-color;
+}
+
+.blue.button {
+  background-color: $blue-color;
+}
+
+.red.button {
+  background-color: $red-color;
 }

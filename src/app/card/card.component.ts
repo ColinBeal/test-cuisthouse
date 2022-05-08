@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import  { Recipe } from '../recipe.model';
 
 @Component({
@@ -9,7 +8,9 @@ import  { Recipe } from '../recipe.model';
 })
 
 export class CardComponent implements OnInit{
-  public difficulties: string[] = []
+  public difficulties: string[] = [];
+  public currentPath = window.location.pathname;
+
   @Input() card: Recipe = {
     _id: 0,
     label: 'label',
