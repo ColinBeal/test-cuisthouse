@@ -1,0 +1,23 @@
+.button {
+  border-radius: 2em;
+  padding: 0.5em 2.5em 0.5em 2.5em;
+  width: fit-content;
+  background-color: $main-color;
+  color: $accent-color;
+  text-transform: uppercase;
+  cursor: pointer;
+  font: $xs-text;
+  .icon {
+    margin-left: 0.8em;
+  }
+}
+
+.small.button {
+  font: $xxs-text;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+.accent.button {
+  background-color: $accent-color;
+  color: $main-color;
+}

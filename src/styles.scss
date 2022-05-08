@@ -1,6 +1,16 @@
-@import 'stylings/colors.scss';
-@import 'stylings/fonts.scss';
+//variables
+@import 'stylings/variables/colors.scss';
+@import 'stylings/variables/fonts.scss';
 
+//mixins
+@import 'stylings/mixins/placements.scss';
+
+// shared styled components
+@import 'stylings/components/buttons.scss';
+@import 'stylings/components/placements.scss';
+
+
+// shared styles for the whole app
 body {
   margin: 0; // get rid of user agent stylesheet
 }
