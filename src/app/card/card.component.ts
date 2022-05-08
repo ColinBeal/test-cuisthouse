@@ -19,7 +19,7 @@ export class CardComponent implements OnInit{
   };
 
   ngOnInit(): void {
-    //so we don't have to make 5 ngIf, one for each case of difficulty rating
+    //so we don't have to make a ngIf for each case of difficulty rating
     for (let i = 0; i < this.card.difficultyRating; i++) {
       this.difficulties.push('difficulty')
     }

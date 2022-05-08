@@ -1,46 +1,5 @@
 @import '../../styles.scss';
 
-.main {
-  padding: 0 10em 0 10em;
-  background: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/cover-main.png') top right no-repeat;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-size: 100vh;
-  margin-top: -5em;
-
-  .cta-content {
-    @include center-y;
-  }
-
-  .scroll {
-    width: 37px;
-    height: 61px;
-    padding-bottom: 5em;
-    @include center-x;
-  }
-
-}
-
-.selection {
-  padding: 0 10em 0 10em;
-  background: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/bg-orange.svg') top right no-repeat;
-  background-size: 100%;
-  padding-top: 5em;
-  height: 100vh;
-
-  .cards-list {
-    display: flex;
-    flex-wrap:  wrap;
-    justify-content: space-evenly;
-
-    margin: 5em 0em 5em 0em;
-    > * {
-      width: 30%;
-    }
-  }
-}
-
 .feature {
   padding: 2em 10em 2em 10em;
   display: flex;

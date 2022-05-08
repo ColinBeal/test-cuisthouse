@@ -6,10 +6,11 @@
 @import 'stylings/mixins/placements.scss';
 
 // shared styled components
-@import 'stylings/components/buttons.scss';
-@import 'stylings/components/cards.scss';
-@import 'stylings/components/placements.scss';
-@import 'stylings/components/titles.scss';
+@import 'stylings/components/button.scss';
+@import 'stylings/components/card.scss';
+@import 'stylings/components/image-cover.scss';
+@import 'stylings/components/placement.scss';
+@import 'stylings/components/title.scss';
 
 
 // shared styles for the whole app
@@ -17,4 +18,23 @@ body {
   margin: 0; // get rid of user agent stylesheet
   font-family: 'DM Sans', sans-serif;
   color: $body-color;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $main-color $accent-color;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+  border-radius: 20px;
+  border: 3px solid $accent-color;
 }
