@@ -1,0 +1,56 @@
+@import '../../styles.scss';
+
+.nav-menu {
+  background-color: hwb(0deg 38% 62% / 64%);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  position: -webkit-sticky;
+	position: sticky;
+  padding: 0 10em 0 10em;
+  height: 5em;
+	top: 0;
+  display: flex;
+  justify-content: space-between;
+
+  .logo-container {
+    display: flex;
+    img {
+      width: 200px;
+      @include center-y;
+    }
+  }
+
+  .actions-container {
+    display: flex;
+
+    .nav-item:not(.active) {
+      opacity: 0.7;
+    }
+
+    .active a{
+      border-bottom: 2px solid $main-color;
+    }
+
+    .nav-item {
+      padding-right: 5em;
+      color: $accent-color;
+      @include center-y;
+      font: $s-text;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .nav-item:hover {
+      opacity: 1;
+    }
+
+    .translate {
+      @include center-y;
+      margin-left: 5em;
+    }
+
+    .flag {
+      margin-left: 0.8em;
+    }
+  }
+}
