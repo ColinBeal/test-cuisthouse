@@ -1,0 +1,34 @@
+h1 {
+  text-transform: uppercase;
+  font: $xl-text;
+  display: flex;
+  flex-direction: column;
+  span {
+    color: $main-color;
+    font: $xl-text-bold;
+  }
+}
+
+h1.accent {
+  span {
+    color: $accent-color;
+  }
+}
+
+h1.bold {
+  font: $xl-text-bold;
+}
+
+h1:after {
+  border-radius: 1em;
+  content: "";
+  width: 100px
+}
+
+h1.primary:after {
+  border: 3px solid $main-color;
+}
+
+h1.accent:after {
+  border: 3px solid $accent-color;
+}
