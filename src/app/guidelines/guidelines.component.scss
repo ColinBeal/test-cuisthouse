@@ -1,0 +1,79 @@
+@import '../../styles.scss';
+
+.guidelines-container {
+  display: flex;
+  .component-list {
+    width: 20%;
+    height: 100%;
+    padding: 1em;
+    img {
+      width: 90%;
+    }
+    .item {
+      margin-bottom: 1em;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  .guidelines-content-container {
+    border-left: 2px solid $main-color;
+    padding: 1em;
+    display: flex;
+    width: 80%;
+    .guidelines-content {
+      width: 80%;
+      h2 {
+        margin-top: 3em;
+      }
+      pre {
+        overflow-y: scroll;
+      }
+
+      // Variables
+      // colors
+      .color-container {
+        display: flex;
+        align-items: center;
+
+        .color {
+          margin-right: 1em;
+          height: 16px;
+          width: 16px;
+        }
+        .orange {
+          background-color: $main-color;
+        }
+        .accent {
+          background-color: $accent-color;
+          border: 1px solid $body-color;
+        }
+        .body {
+          background-color: $body-color;
+        }
+      }
+
+      // fonts
+      .boldxl {
+        font: $xl-text-bold;
+      }
+      .xl {
+        font: $xl-text;
+      }
+      .l {
+        font: $l-text;
+      }
+      .m {
+        font: $m-text;
+      }
+      .s {
+        font: $s-text;
+      }
+      .xs {
+        font: $xs-text;
+      }
+      .xxs {
+        font: $xxs-text;
+      }
+    }
+  }
+}

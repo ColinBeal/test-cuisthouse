@@ -1,0 +1,148 @@
+
+<div class="guidelines-container">
+  <div class="component-list">
+    <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/logo.png" alt="logo cuisthouse">
+    <h3>Variables</h3>
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="colors">
+      <a>🟠 Colors</a>
+    </div>
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="fonts">
+      ✒️ Fonts
+    </div>
+    <hr>
+    <h3>Components</h3>
+    <div class="item">
+      🍞 Breadcrumb
+    </div>
+    <div class="item">
+      🆗 Button
+    </div>
+    <div class="item">
+      🥧 Card
+    </div>
+    <div class="item">
+      🍴 Difficulty rating
+    </div>
+    <div class="item">
+      🔲 Field
+    </div>
+    <div class="item">
+      ⛰️ Image cover
+    </div>
+    <div class="item">
+      ⬅️ Placement
+    </div>
+    <div class="item">
+      📰 Title
+    </div>
+  </div>
+  <div class="guidelines-content-container">
+    <div class="x-centered guidelines-content">
+      <h1 class="primary">Guidelines</h1>
+      <h2>Why guidelines?</h2>
+      <p>
+        These guidelines are a set of components and good practices, these principles are made to be reusable throughout the Cuisthouse application, their usage simplify the designing process of new interfaces and also make their integration easier for the dev team.
+      </p>
+      <hr>
+
+      <h2 id="colors">Colors</h2>
+
+      <h3>Main color</h3>
+      <div class="color-container">
+        <div class="color orange"></div>
+        <pre>$main-color</pre>
+      </div>
+      <p>
+        The main color of the application is orange (#F5A22F), you can use it in scss by calling the $main-color variable.
+        <br />
+        It's widely used in every of the other components primary states.
+      </p>
+
+      <h3>Accent color</h3>
+      <div class="color-container">
+        <div class="color accent"></div>
+        <pre>$accent-color</pre>
+      </div>
+      <p>
+        The accent color of the application is white (#FFFFFF), you can use it in scss by calling the $accent-color variable.
+        <br />
+        It's used on the secondary states of components and in order to contrast on main color background.
+      </p>
+
+      <h3>Body color</h3>
+      <div class="color-container">
+        <div class="color body"></div>
+        <pre>$body-color</pre>
+      </div>
+      <p>
+        The body color of the application is a really dark grey (#242424), you can use it in scss by calling the $body-color variable.
+        <br />
+        It's used for all the text in the application as default, differents variants with an opacity tuned downed are used for long texts.
+      </p>
+      <hr>
+
+      <h2 id="fonts">Fonts</h2>
+      <div class="boldxl">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$xl-text-bold</pre>
+      <div class="xl">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$xl-text</pre>
+      <div class="l">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$l-text</pre>
+      <div class="m">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$m-text</pre>
+      <div class="s">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$s-text</pre>
+      <div class="xs">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$xs-text</pre>
+      <div class="xxs">
+        Almost before we knew it, we had left the ground.
+      </div>
+      <pre>$xxs-text</pre>
+      <p>
+        The font used in the app is DM Sans, various sizes are in the application ranging from xxs the smallest size to xl the bigger size, a bold variant is available for the xl-text variant used in headers.
+        <br/>
+        You can use them in scss using the $`size`-text?-bold pattern.
+      </p>
+      <hr>
+
+      <h2 id="breadcrumb">Breadcrumb</h2>
+
+      <div class="breadcrumb">
+        <div class="item" routerLink="/favorites">Favorites</div>
+        <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-right.png" alt="chevron right">
+        <div class="active item">Apple Frangipane Tart</div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;breadcrumb&#x22;&#x3E;
+            &#x3C;div class=&#x22;item&#x22; routerLink=&#x22;/favorites&#x22;&#x3E;Favorites&#x3C;/div&#x3E;
+            &#x3C;img src=&#x22;https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-right.png&#x22; alt=&#x22;chevron right&#x22;&#x3E;
+            &#x3C;div class=&#x22;active item&#x22;&#x3E;Apple Frangipane Tart&#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The breadrumb components is used to help the user to know where he is in the application while he is navigating.
+        We do not use it on the main page, but for every "/" in the route path you should add an item in the breadcrumb.
+        The current state is defined by an active item.
+        Items that are not active should have a routerLink so that the user can easily navigate to the parent elements.
+      </p>
+      <hr>
+
+
+
+    </div>
+  </div>
+</div>
