@@ -379,36 +379,88 @@
 
       <h2 id="title">Title</h2>
 
-      <div class="breadcrumb">
-        <div class="item" routerLink="/favorites">Favorites</div>
-        <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-right.png" alt="chevron right">
-        <div class="active item">Apple Frangipane Tart</div>
-      </div>
+      <h3>Primary title</h3>
+      <h1 class="primary">
+        <div class="header-content">
+          like a chef, <span>at home</span>
+        </div>
+      </h1>
+      <h1 class="primary no-underline">
+        <div class="header-content">
+          like a chef, <span>at home</span>
+        </div>
+      </h1>
+      <h1 class="primary bold">
+        <div class="header-content">
+          like a chef, <span>at home</span>
+        </div>
+      </h1>
+      <h1 class="primary medium">
+        <div class="header-content">
+          like a chef, <span>at home</span>
+        </div>
+      </h1>
+
       <pre>
         <code>
-          &#x3C;div class=&#x22;breadcrumb&#x22;&#x3E;
-            &#x3C;div class=&#x22;item&#x22; routerLink=&#x22;/favorites&#x22;&#x3E;Favorites&#x3C;/div&#x3E;
-            &#x3C;img src=&#x22;https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-right.png&#x22; alt=&#x22;chevron right&#x22;&#x3E;
-            &#x3C;div class=&#x22;active item&#x22;&#x3E;Apple Frangipane Tart&#x3C;/div&#x3E;
-          &#x3C;/div&#x3E;
+          &#x3C;h1 class=&#x22;primary&#x22;&#x3E;
+            &#x3C;div class=&#x22;header-content&#x22;&#x3E;
+              like a chef, &#x3C;span&#x3E;at home&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/h1&#x3E;
+
+          &#x3C;h1 class=&#x22;primary no-underline&#x22;&#x3E;
+            &#x3C;div class=&#x22;header-content&#x22;&#x3E;
+              like a chef, &#x3C;span&#x3E;at home&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/h1&#x3E;
+
+          &#x3C;h1 class=&#x22;primary bold&#x22;&#x3E;
+            &#x3C;div class=&#x22;header-content&#x22;&#x3E;
+              like a chef, &#x3C;span&#x3E;at home&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/h1&#x3E;
+
+          &#x3C;h1 class=&#x22;primary medium&#x22;&#x3E;
+            &#x3C;div class=&#x22;header-content&#x22;&#x3E;
+              like a chef, &#x3C;span&#x3E;at home&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/h1&#x3E;
         </code>
       </pre>
       <p>
-        The breadrumb components is used to help the user know where he is in the application while he is navigating.
+        The primary title component is used for headers, it is mainly used as the header linked to a call to action to attract the user attention.
         <br />
+        To be used you only need to add a class primary to a h1 element, if you want to use the multicolor pattern you need to add a span that will color the text inside it.
+        <br />
+        You can also remove the underline if you use the class no-underline on the h1 element.
+        An all bold version and a lowercase version are available the first by adding the bold clas, and the latter the medium class to the h1 element.
+      </p>
 
-        It's defined by the class breadcrumb and nest item class div each of them separated by chevron icons
-        <br/>
-        We do not use it on the main page, but for every "/" in the route path you should add an item in the breadcrumb.
-        The current state is defined by an active item.
-        Items that are not active should have a routerLink so that the user can easily navigate to the parent elements.
-        <br/>
-        It should always be used at the beginning of the view so it appears just after the nav-bar in dom.
+      <h3>Accent title</h3>
+      <div class="orange-container">
+        <h1 class="accent">
+          <div class="header-content">
+            like a chef, <span>at home</span>
+          </div>
+        </h1>
+      </div>
+      <pre>
+        <code>
+          &#x3C;h1 class=&#x22;accent&#x22;&#x3E;
+            &#x3C;div class=&#x22;header-content&#x22;&#x3E;
+              like a chef, &#x3C;span&#x3E;at home&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/h1&#x3E;
+        </code>
+      </pre>
+      <p>
+        The accent title component is used for sub-headers on main color backgrounds.
+        <br />
+        To be used you only need to add a class accent to a h1 element.
+        For variants, it has the same properties as primary title.
       </p>
       <hr>
-
-
-
     </div>
   </div>
 </div>

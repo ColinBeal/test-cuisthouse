@@ -33,7 +33,7 @@ input[type="text"] {
       margin-left: 1em;
       height: 24px;
       width: 24px;
-      background: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-down.png') center center no-repeat;
+      background: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-down-orange.png') center center no-repeat;
     }
   }
 }
@@ -59,6 +59,9 @@ input[type="text"] {
 .dropdown:hover {
   background-color: $main-color;
   border: 1px solid $accent-color;
+  .chevron {
+    background-image: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-down-grey.png');
+  }
   .dropdown-content {
     display: block;
   }
