@@ -1,0 +1,15 @@
+.breadcrumb {
+  display: flex;
+  border: 1px solid $body-color;
+  padding: 0.5em 10em 0.5em 10em;
+  color: $body-color;
+  .item:not(.active) {
+    opacity: 0.5
+  }
+  .item {
+    margin: 0 0.5em 0 0.5em;
+  }
+  .active {
+    color: $main-color;
+  }
+}
