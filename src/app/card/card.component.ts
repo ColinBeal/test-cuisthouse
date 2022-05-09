@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import  { Recipe } from '../recipe.model';
 
@@ -8,8 +8,7 @@ import  { Recipe } from '../recipe.model';
   styleUrls: ['./card.component.scss']
 })
 
-export class CardComponent implements OnInit{
-  public difficulties: string[] = [];
+export class CardComponent {
   public currentPath = window.location.pathname;
 
   @Input() card: Recipe = {
@@ -20,15 +19,7 @@ export class CardComponent implements OnInit{
     difficultyRating: 1
   };
 
-  constructor(
-    private router: Router  ) {}
-
-  ngOnInit(): void {
-    //so we don't have to make a ngIf for each case of difficulty rating
-    for (let i = 0; i < this.card.difficultyRating; i++) {
-      this.difficulties.push('difficulty')
-    }
-  }
+  constructor(private router: Router  ) {}
 
   goToDetails() {
     if (this.currentPath === '/favorites') {

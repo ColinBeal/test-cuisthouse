@@ -4,22 +4,20 @@
       <div class="category">
         {{card.category}}
       </div>
-      <div class="difficulty">
-        <img *ngFor="let difficulty of difficulties" src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/fork.png" alt="fork">
-      </div>
+      <difficulty-rating [rating]="card.difficultyRating"></difficulty-rating>
     </div>
     <div class="label">
       {{card.label}}
     </div>
     <div class="x-centered actions">
       <div class="small button hidden">
-        <a>Voir la recette</a>
+        <a>See the recipe</a>
       </div>
       <div *ngIf="currentPath === '/recipes'" class="small blue button hidden">
-        <a>Ajouter aux favoris</a>
+        <a>Add to favorites</a>
       </div>
       <div *ngIf="currentPath === '/favorites'" class="small red button hidden">
-        <a>Retirer des favoris</a>
+        <a>Remove from favorites</a>
       </div>
     </div>
   </div>
