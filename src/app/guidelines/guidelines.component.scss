@@ -5,6 +5,8 @@
   .component-list {
     width: 20%;
     height: 100%;
+    position: sticky;
+    top: 0;
     padding: 1em;
     img {
       width: 90%;
@@ -27,6 +29,10 @@
       }
       pre {
         overflow-y: scroll;
+      }
+      .orange-container {
+        background-color: $main-color;
+        padding: 1em;
       }
 
       // Variables
@@ -73,6 +79,12 @@
       }
       .xxs {
         font: $xxs-text;
+      }
+
+      //Components
+      //breadcrumb
+      .breadcrumb {
+        position: inherit; // prevents breadcrumb from following page scroll
       }
     }
   }

@@ -11,28 +11,22 @@
     </div>
     <hr>
     <h3>Components</h3>
-    <div class="item">
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="breadcrumb">
       🍞 Breadcrumb
     </div>
-    <div class="item">
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="button">
       🆗 Button
     </div>
-    <div class="item">
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="card">
       🥧 Card
     </div>
-    <div class="item">
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="difficultyRating">
       🍴 Difficulty rating
     </div>
-    <div class="item">
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="field">
       🔲 Field
     </div>
-    <div class="item">
-      ⛰️ Image cover
-    </div>
-    <div class="item">
-      ⬅️ Placement
-    </div>
-    <div class="item">
+    <div class="item" [routerLink] = "['/guidelines']"  fragment="title">
       📰 Title
     </div>
   </div>
@@ -134,10 +128,282 @@
         </code>
       </pre>
       <p>
-        The breadrumb components is used to help the user to know where he is in the application while he is navigating.
+        The breadrumb components is used to help the user know where he is in the application while he is navigating.
+        <br />
+
+        It's defined by the class breadcrumb and nest item class div each of them separated by chevron icons
+        <br/>
         We do not use it on the main page, but for every "/" in the route path you should add an item in the breadcrumb.
         The current state is defined by an active item.
         Items that are not active should have a routerLink so that the user can easily navigate to the parent elements.
+        <br/>
+        It should always be used at the beginning of the view so it appears just after the nav-bar in dom.
+      </p>
+      <hr>
+
+      <h2 id="button">Button</h2>
+      <h3>Button</h3>
+      <div class="button">
+        <div routerLink="/favorites">See my favorites</div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;button&#x22;&#x3E;
+            &#x3C;div routerLink=&#x22;/favorites&#x22;&#x3E;See my favorites&#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The default button is used on each view as the main action. It's defined with the class button.
+      </p>
+
+      <h3>Accent Button</h3>
+      <div class="orange-container">
+        <div class="accent button">
+          <div routerLink="/favorites">See my favorites</div>
+        </div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;accent button&#x22;&#x3E;
+            &#x3C;div routerLink=&#x22;/favorites&#x22;&#x3E;See my favorites&#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The accent button is a variant of button, it is used on each view as a secondary action. It's defined by adding the class accent.
+        Note that it can only be used on a main-color background.
+      </p>
+
+      <h3>Actions Button</h3>
+      <div class="blue button">
+        <div>Add to my favorites</div>
+      </div>
+      <br />
+      <div class="red button">
+        <div>Delete from my favorites</div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;blue button&#x22;&#x3E;
+            &#x3C;div&#x3E;Add to my favorites&#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+
+          &#x3C;div class=&#x22;red button&#x22;&#x3E;
+            &#x3C;div&#x3E;Delete from my favorites&#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The action button is a variant of button, he is used for a specific action, the red one is used only for deleting actions and the blue one for creation actions. They are defined by adding the class red or blue.
+      </p>
+
+      <h3>Accent Button</h3>
+      <div class="small button">
+        <div>See my favorites</div>
+      </div>
+      <br />
+      <div class="small blue button">
+        <div>Add to my favorites</div>
+      </div>
+      <br />
+      <div class="small red button">
+        <div>Delete from my favorites</div>
+      </div>
+      <br />
+      <div class="orange-container">
+        <div class="small accent button">
+          <div>See my favorites</div>
+        </div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;small button&#x22;&#x3E;
+            &#x3C;a&#x3E;See the recipe&#x3C;/a&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The small button is used for sub-component action. It's defined by adding the class small.
+        It has the same logic as it's bigger counterpart.
+        Every colors can be used with this variant by adding it's own class.
+      </p>
+      <hr>
+
+      <h2 id="card">Card</h2>
+      <h3>Single card</h3>
+      <app-card [card]="cards[0]"></app-card>
+      <pre>
+        <code>
+          &#x3C;app-card [card]=&#x22;card&#x22;&#x3E;&#x3C;/app-card&#x3E;
+        </code>
+      </pre>
+      <p>
+        The card component is used to display a quick abstract of a recipe to the user.
+        <br />
+        The card item is an angular component defined in the dom as app-card. It takes a card object as an input (defined in card.model.ts).
+      </p>
+
+      <h3>Cards list</h3>
+      <div class="cards-list-container">
+        <div class="cards-list">
+          <app-card *ngFor="let card of cards" [card]="card"></app-card>
+        </div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;cards-list-container&#x22;&#x3E;
+            &#x3C;div class=&#x22;cards-list&#x22;&#x3E;
+              &#x3C;app-card *ngFor=&#x22;let card of cards&#x22; [card]=&#x22;card&#x22;&#x3E;&#x3C;/app-card&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The cards list component is used to display list of cards, it's the most common way of displaying recipes cards.
+        <br />
+        The cards-list class is nested in a cards-list-container that adds the orange background wich is used by default on most pages.
+        You can remove the orange background by adding the class no-bg after the cards-list-container.
+      </p>
+      <hr>
+
+      <h2 id="difficultyRating">Difficulty Rating</h2>
+      <h3>Default Difficulty Rating</h3>
+      <difficulty-rating [rating]="3"></difficulty-rating>
+      <pre>
+        <code>
+          &#x3C;difficulty-rating [rating]=&#x22;3&#x22;&#x3E;&#x3C;/difficulty-rating&#x3E;
+        </code>
+      </pre>
+      <p>
+        The difficulty rating component is used to give the information about the difficulty of the recipe, the default use is in other styled component.
+        <br />
+        The difficulty rating item is an angular component defined in the dom as difficulty-rating. It takes a rating; a number between 1 and 5 as an input.
+      </p>
+
+      <h3>Big Difficulty Rating</h3>
+      <difficulty-rating class="big" [rating]="3"></difficulty-rating>
+      <pre>
+        <code>
+          &#x3C;difficulty-rating class=&#x22;big&#x22; [rating]=&#x22;3&#x22;&#x3E;&#x3C;/difficulty-rating&#x3E;
+        </code>
+      </pre>
+      <p>
+        The big difficulty rating is a variant used in heading to give the same information but with bigger forks.
+        <br />
+        To be used the class big should be added to the element difficulty-rating
+      </p>
+      <hr>
+
+      <h2 id="field">Field</h2>
+      <h3>Input field</h3>
+      <div class="orange-container">
+        <input type="text" class="field" placeholder="search for a recipe">
+      </div>
+      <pre>
+        <code>
+          &#x3C;input type=&#x22;text&#x22; class=&#x22;field&#x22; placeholder=&#x22;search for a recipe&#x22;&#x3E;
+        </code>
+      </pre>
+      <p>
+        The input field component permits the user to enter text into the application, the default use is in recipes searches.
+        <br />
+        It is used by adding a class field to an input element.
+      </p>
+
+      <h3>Dropdown field</h3>
+      <div class="orange-container">
+        <div class="field dropdown">
+          <div class="filter-content">
+            Filter by categories
+            <div class="chevron"></div>
+          </div>
+          <div class="dropdown-content">
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+            <div class="item">Hello World!</div>
+          </div>
+        </div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;field dropdown&#x22;&#x3E;
+            &#x3C;div class=&#x22;filter-content&#x22;&#x3E;
+              Filter by categories
+              &#x3C;div class=&#x22;chevron&#x22;&#x3E;&#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;dropdown-content&#x22;&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+              &#x3C;div class=&#x22;item&#x22;&#x3E;Hello World!&#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The dropdown field component is used to give the user a choice in an array of value, it's default use is in filters.
+        <br />
+        To be used the class field and dropdown should be added to an element, inside this element an element with class dropdown-content should parent elements with class item for each of the values.
+      </p>
+      <hr>
+
+      <h2 id="title">Title</h2>
+
+      <div class="breadcrumb">
+        <div class="item" routerLink="/favorites">Favorites</div>
+        <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-right.png" alt="chevron right">
+        <div class="active item">Apple Frangipane Tart</div>
+      </div>
+      <pre>
+        <code>
+          &#x3C;div class=&#x22;breadcrumb&#x22;&#x3E;
+            &#x3C;div class=&#x22;item&#x22; routerLink=&#x22;/favorites&#x22;&#x3E;Favorites&#x3C;/div&#x3E;
+            &#x3C;img src=&#x22;https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-right.png&#x22; alt=&#x22;chevron right&#x22;&#x3E;
+            &#x3C;div class=&#x22;active item&#x22;&#x3E;Apple Frangipane Tart&#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        </code>
+      </pre>
+      <p>
+        The breadrumb components is used to help the user know where he is in the application while he is navigating.
+        <br />
+
+        It's defined by the class breadcrumb and nest item class div each of them separated by chevron icons
+        <br/>
+        We do not use it on the main page, but for every "/" in the route path you should add an item in the breadcrumb.
+        The current state is defined by an active item.
+        Items that are not active should have a routerLink so that the user can easily navigate to the parent elements.
+        <br/>
+        It should always be used at the beginning of the view so it appears just after the nav-bar in dom.
       </p>
       <hr>
 

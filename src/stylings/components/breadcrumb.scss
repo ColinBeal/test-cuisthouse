@@ -1,7 +1,8 @@
 .breadcrumb {
   display: flex;
   border: 1px solid $body-color;
-  width: 100%;
+  padding: 0.5em 10em 0.5em 10em;
+  width: -webkit-fill-available;
   background-color: $accent-color;
   color: $body-color;
   position: -webkit-sticky;

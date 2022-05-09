@@ -13,12 +13,6 @@ h1.medium {
   text-transform: none;
 }
 
-h1.accent {
-  span {
-    color: $accent-color;
-  }
-}
-
 h1.bold {
   font: $xl-text-bold;
 }
@@ -31,6 +25,12 @@ h1:not(.no-underline):after {
 
 h1.primary:after {
   border: 3px solid $main-color;
+}
+
+h1.accent {
+  span {
+    color: $accent-color;
+  }
 }
 
 h1.accent:after {
