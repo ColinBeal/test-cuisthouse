@@ -2,17 +2,17 @@
   <div class="cta-content">
     <h1 class="primary">
       <div class="header-content">
-        Cuisiner<br/>Comme un chef, <span>à la maison</span>
+        Cook <br/>like a chef, <span>at home</span>
       </div>
     </h1>
     <p>
-      De délicieuses idées et recettes de cuisine classées par thèmes <br />
-      ou par catégories, avec photos, faciles ou techniques, 100% testées
+      Delicious cooking ideas and recipes classified by theme<br />
+      or by category, with photos, easy or technical, 100% tested
     </p>
     <br />
     <br />
     <div class="button">
-      <a>nos recettes</a>
+      <div routerLink="/recipes">Our recipes</div>
     </div>
   </div>
   <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/scroll-icon.png" alt="scroll down" class="scroll">
@@ -24,7 +24,7 @@
     <app-card *ngFor="let card of cards" [card]="card"></app-card>
   </div>
   <div class="x-centered button">
-    <a>Voir toutes les recettes</a>
+    <div routerLink="/recipes">See all our recipes</div>
   </div>
 </div>
 
@@ -33,17 +33,17 @@
     <img src="https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/cover-main2.png" alt="">
   </div>
   <div class="feature-content">
-    <p>Chaque semaine de nouvelles recettes que vous pouvez</p>
+    <p>Every week new recipes you could</p>
     <h1 class="bold accent">
       <div class="header-content">
-        Ajouter à <span>vos favoris</span>
+        Add to <span>your favorites</span>
       </div>
     </h1>
     <p class="x-centered">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     <br />
     <br />
     <div class="x-centered accent button">
-      <a>Voir mes favoris</a>
+      <div routerLink="/favorites">See my favorites</div>
     </div>
   </div>
 </div>

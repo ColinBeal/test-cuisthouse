@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipe-detail.component.scss']
 })
 
-export class RecipesDetailComponent {
+export class RecipesDetailComponent implements OnInit{
+  public currentPath?: string;
+
+  constructor(private router: Router,
+              private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.currentPath = this.activatedRoute.snapshot.url[0].path
+  }
 }

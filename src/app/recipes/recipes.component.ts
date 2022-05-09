@@ -12,21 +12,21 @@ export class RecipesComponent {
   public cards: Recipe[] = [
     {
       _id: 1,
-      label: 'Tarte aux pommes et frangipane',
-      category: 'Dessert',
+      label: 'Apple frangipane tart',
+      category: 'Desert',
       url: 'url(https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/tarte.jpg)',
       difficultyRating: 2
     },
     {
       _id: 2,
-      label: 'Tarte aux pommes et frangipane',
+      label: 'Apple frangipane tart',
       category: 'Dessert',
       url: 'url(https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/tarte.jpg)',
       difficultyRating: 1
     },
     {
       _id: 3,
-      label: 'Tarte aux pommes et frangipane',
+      label: 'Apple frangipane tart',
       category: 'Dessert',
       url: 'url(https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/tarte.jpg)',
       difficultyRating: 4
