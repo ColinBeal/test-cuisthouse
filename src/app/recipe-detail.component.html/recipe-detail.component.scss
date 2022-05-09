@@ -4,6 +4,7 @@ $left-part-width: 44%;
 
 .breadcrumb {
   padding: 0.5em 10em 0.5em 10em;
+  
 }
 
 .title-container {
@@ -63,6 +64,7 @@ $left-part-width: 44%;
     }
   }
   .right-container {
+    width: 56%; //fix an issue with calc on stackblitz
     width: calc(100% - $left-part-width);
     p {
       width: 60%;
@@ -78,9 +80,9 @@ $left-part-width: 44%;
   h1 {
     @include center-y;
     text-align: center;
-    width: $left-part-width
+    width: $left-part-width;
   }
-  img{
+  img {
     height: 500px;
     position: relative;
     top: -300px;
