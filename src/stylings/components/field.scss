@@ -1,0 +1,65 @@
+//general field style
+.fields {
+  > * {
+    margin-left: 1em;
+  }
+}
+
+.field {
+  padding: 12px;
+  text-transform: uppercase;
+  border: 1px solid $accent-color;
+  border-radius: 3px;
+  color: $body-color;
+  height: 24px;
+}
+
+input.field {
+  width: 300px;
+}
+
+input[type="text"] {
+  padding: 12px; //overrides user agent stylesheet
+}
+
+// dropdown specific style
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: $accent-color;
+  .filter-content {
+    display: flex;
+    .chevron {
+      margin-left: 1em;
+      height: 24px;
+      width: 24px;
+      background: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-down.png') center center no-repeat;
+    }
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-transform: none;
+  left: 0;
+  margin-top: 0.8em;
+  background-color: $accent-color;
+  min-width: 300px;
+  max-height: 200px;
+  overflow-y: scroll;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 12px 16px;
+  z-index: 1;
+  .item {
+    margin-top: 0.5em;
+  }
+}
+
+.dropdown:hover {
+  background-color: $main-color;
+  border: 1px solid $accent-color;
+  .dropdown-content {
+    display: block;
+  }
+}

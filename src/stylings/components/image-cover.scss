@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100vh;
   background-size: 100vh;
-  margin-top: -5em;
+  margin-top: -5em; //to get the blur effect even if we are not scrolling
   .cta-content {
     @include center-y;
     max-width: 600px;

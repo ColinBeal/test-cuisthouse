@@ -1,0 +1,14 @@
+difficulty-rating.big {
+  img  {
+    height: 32px;
+  }
+}
+
+.difficulty {
+  img  {
+    height: 24px;
+  }
+  img:not(:last-child){
+    margin-right: 0.2em;
+  }
+}

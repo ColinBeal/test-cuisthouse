@@ -20,20 +20,16 @@
      justify-content: space-between;
      font: $xs-text;
      color: $main-color;
-     .difficulty {
-       img  {
-         margin-top: -2em;
-         height: 24px;
-       }
-       img:not(:last-child){
-         margin-right: 0.2em;
-       }
-     }
    }
    .label {
      font: $m-text;
      color: $accent-color;
    }
+   .difficulty {
+      img  {
+        margin-top: -2em;
+      }
+    }
    .actions {
     display: flex;
     flex-direction: row;
@@ -47,6 +43,7 @@
   }
 }
 
+//card hover animation
 .card:hover {
  .overlay {
    transition: height 300ms;
@@ -66,12 +63,10 @@
   background-size: 100%;
   padding-top: 5em;
   height: 100vh;
-
   .cards-list {
     display: flex;
     flex-wrap:  wrap;
     justify-content: space-evenly;
-
     margin: 5em 0em 5em 0em;
     > * {
       width: 30%;
@@ -83,7 +78,7 @@
   background: none;
 }
 
-// animation
+// fade in animation
 @keyframes fade_in_show {
  0% {
       opacity: 0;

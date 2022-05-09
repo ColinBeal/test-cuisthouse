@@ -9,6 +9,10 @@ h1 {
   }
 }
 
+h1.medium {
+  text-transform: none;
+}
+
 h1.accent {
   span {
     color: $accent-color;
@@ -19,7 +23,7 @@ h1.bold {
   font: $xl-text-bold;
 }
 
-h1:after {
+h1:not(.no-underline):after {
   border-radius: 1em;
   content: "";
   width: 100px
