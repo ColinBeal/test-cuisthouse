@@ -60,7 +60,7 @@ input[type="text"] {
   background-color: $main-color;
   border: 1px solid $accent-color;
   .chevron {
-    background-image: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-down-grey.png');
+    background-image: url('https://raw.githubusercontent.com/ColinBeal/test-cuisthouse/master/src/assets/img/chevron-down.png') !important;
   }
   .dropdown-content {
     display: block;
